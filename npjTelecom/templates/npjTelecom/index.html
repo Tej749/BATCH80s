@@ -1,18 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
-</head>
-<body>
-    {% for dx in data %}
+    {% extends 'npjTelecom/base.html' %}
 
-    <h1>Name : {{dx.name}}</h1>
-    <h1>Address : {{dx.add}}</h1>
-    <h1>Mobile No : {{dx.mob}}</h1>
-    <h1>email : {{dx.email}}</h1>
+    {% block title %}
+        <title>index</title>
+    {% endblock %}
 
-    {% endfor %}
 
-</body>
-</html>
+    {% block content %}
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="container mt-5">
+  <h2>Bootstrap Table Example</h2>
+
+  <!-- Responsive Table -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover table-sm align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Role</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>John</td>
+          <td>Doe</td>
+          <td>johndoe@example.com</td>
+          <td>Admin</td>
+          <td>
+            <button class="btn btn-sm btn-primary">Edit</button>
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jane</td>
+          <td>Smith</td>
+          <td>janesmith@example.com</td>
+          <td>User</td>
+          <td>
+            <button class="btn btn-sm btn-primary">Edit</button>
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Mike</td>
+          <td>Ross</td>
+          <td>mikeross@example.com</td>
+          <td>Editor</td>
+          <td>
+            <button class="btn btn-sm btn-primary">Edit</button>
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+    {% endblock %}
