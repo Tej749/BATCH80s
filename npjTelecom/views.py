@@ -18,3 +18,4 @@ def service(request):
     return render(request, "npjTelecom/service.html")
 
 
+
